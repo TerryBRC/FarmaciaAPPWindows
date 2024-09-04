@@ -1,4 +1,5 @@
 ﻿using DevExpress.Xpo;
+using farm.el_porvenir;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace farm
             XpoDefault.DataLayer = XpoDefault.GetDataLayer(el_porvenir.ConnectionHelper.ConnectionString,DevExpress.Xpo.DB.AutoCreateOption.DatabaseAndSchema);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Clientes());
+            Application.Run(new Medicamentos());
         }
     }
 }

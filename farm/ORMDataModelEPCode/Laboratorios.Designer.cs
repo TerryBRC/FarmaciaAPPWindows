@@ -43,6 +43,22 @@ namespace farm.el_porvenir
             get { return fProveedor_id_proveedor; }
             set { SetPropertyValue<Proveedor>(nameof(Proveedor_id_proveedor), ref fProveedor_id_proveedor, value); }
         }
+        string fNombre;
+        [Size(45)]
+        [Persistent(@"nombre")]
+        public string Nombre
+        {
+            get { return fNombre; }
+            set { SetPropertyValue<string>(nameof(Nombre), ref fNombre, value); }
+        }
+        string fDireccion;
+        [Size(45)]
+        [Persistent(@"direccion")]
+        public string Direccion
+        {
+            get { return fDireccion; }
+            set { SetPropertyValue<string>(nameof(Direccion), ref fDireccion, value); }
+        }
     }
 
 }

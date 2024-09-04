@@ -34,8 +34,7 @@ namespace farm.el_porvenir
             Array.Copy(persistentTypes, copy, persistentTypes.Length);
             return copy;
         }
-#warning We recommend moving the connection string out of your source code (for instance, to a configuration file) to improve your application's maintainability and security.
-        public const string ConnectionString = "XpoProvider=MySql;server=localhost;user id=root; password=root; database=el_porvenir;persist security info=true;CharSet=utf8;";
+        public static string ConnectionString { get { return System.Configuration.ConfigurationManager.ConnectionStrings["Conn"].ConnectionString; } }
         public static void Connect(DevExpress.Xpo.DB.AutoCreateOption autoCreateOption, bool threadSafe = false)
         {
             if (threadSafe)
